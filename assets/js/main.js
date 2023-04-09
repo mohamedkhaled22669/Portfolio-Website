@@ -54,7 +54,6 @@ window.onscroll = function () {
     allSkill.forEach(skill => {
       skill.style.width = skill.dataset.progress;
     })
-    console.log(windowHeight);
   }
   // else if (windowScrollTop < (skillOffsetTop + skillsOuterHeight - windowHeight  200 )) {
   //   let allSkill = document.querySelectorAll('.skills .skills-box .skill-progress span');
@@ -71,8 +70,9 @@ window.onscroll = function () {
 const allLinksHeader = document.querySelectorAll('.header .navbar a');
 
 // select all links from footer
-const allLinksFooter = document.querySelectorAll('.footer .box a');
+const allLinksFooter = document.querySelectorAll('.footer .box:nth-child(2) a');
 
+// function many links
 function scrollToSectionSmooth(ele) {
   ele.forEach(ele => {
     ele.addEventListener('click' , (e) => {
@@ -85,8 +85,38 @@ function scrollToSectionSmooth(ele) {
   });
 };
 
+// select button about me 
+const btnAboutMe = document.querySelector(".home .content .btn");
+
+// function one link
+// btnAboutMe.onclick = function(e) {
+
+//   e.stopPropagation();  
+
+//   e.preventDefault();
+
+//   document.querySelector(e.target.dataset.section).scrollIntoView({
+//     behavior: 'smooth'
+//   });
+// }
+
+// function one link
+function scrollToSectionSmoothOneItem(ele) {
+  ele.addEventListener('click' , (e) => {
+    e.stopPropagation()
+    
+    e.preventDefault();
+
+    document.querySelector(e.target.dataset.section).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+};
+
 
 scrollToSectionSmooth(allLinksHeader);
 scrollToSectionSmooth(allLinksFooter);
+scrollToSectionSmoothOneItem(btnAboutMe);
+
 
 
