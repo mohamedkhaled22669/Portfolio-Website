@@ -1,6 +1,6 @@
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-  strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+  strings: ["frontend development", "backend development", "web designing", "web development"],
   loop: true,
   typeSpeed: 50,
   backSpeed: 25,
@@ -32,7 +32,16 @@ btnToggle.onclick = function() {
 
 
 // select Skills Selector
-let ourSkills = document.querySelector('.skills');
+let ourSkills = document.querySelector('#skills');
+
+// var to add active class to navbar
+let homeScroll = document.getElementById('home')
+let aboutScroll = document.getElementById("about-me")
+let skillsScroll = document.getElementById("skills")
+let workScroll = document.getElementById("work")
+let contactScroll = document.getElementById("contact")
+
+
 
 window.onscroll = function () {
 
@@ -48,7 +57,7 @@ window.onscroll = function () {
   // window ScrollTop
   let windowScrollTop = this.pageYOffset;
 
-  if (windowScrollTop > (skillOffsetTop + skillsOuterHeight - windowHeight - 200)) {
+  if (windowScrollTop > skillOffsetTop - 100) {
     let allSkill = document.querySelectorAll('.skills .skills-box .skill-progress span');
 
     allSkill.forEach(skill => {
@@ -61,6 +70,42 @@ window.onscroll = function () {
   //     skill.style.width = 0;
   //   })
   // }
+
+
+  // console.log(workScroll.offsetTop + workScroll.offsetHeight);
+  
+  // if(this.pageYOffset > workScroll.offsetTop && this.pageYOffset < (workScroll.offsetTop + workScroll.offsetHeight)) {
+  //   console.log("true");
+  // }
+  // else {
+  //   console.log("flase");
+  // }
+
+  addClassToActiveLink(homeScroll)
+  addClassToActiveLink(aboutScroll)
+  addClassToActiveLink(skillsScroll)
+  addClassToActiveLink(workScroll)
+  addClassToActiveLink(contactScroll)
+  
+}
+
+let addClassToActiveLink = function(section) {
+  if(this.pageYOffset > section.offsetTop - 100  && this.pageYOffset < (section.offsetTop + section.offsetHeight + 100)) {
+    let links = document.querySelectorAll('.header .navbar li a')
+    links.forEach( (ele) => {
+      // console.log(section.offsetTop);
+      ele.classList.remove('active')
+
+    })
+    for (let i = 0; i < links.length;i++) {
+      // let dataSections =links[i].dataset.section
+
+      if (links[i].dataset.section === ("#" + section.id)) {
+        links[i].classList.add('active')
+        
+      }
+    }
+  }
 }
 
 
@@ -112,6 +157,8 @@ function scrollToSectionSmoothOneItem(ele) {
     });
   });
 };
+
+
 
 
 scrollToSectionSmooth(allLinksHeader);

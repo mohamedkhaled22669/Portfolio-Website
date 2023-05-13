@@ -434,7 +434,7 @@ body {
 .about-me {
   text-align: center;
   background-color: #FFF;
-  padding: 70px 8.5%;
+  padding: 110px 8.5%;
 
 }
 
@@ -544,8 +544,8 @@ body {
 
 /* Start Skills */
 .skills {
-  padding-top: 70px;
-  padding-bottom: 50px;
+  padding-top: 110px;
+  padding-bottom: 110px;
 }
 
 .skills h2 {
@@ -619,8 +619,8 @@ body {
 
 /* Start All Work */
 .work {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 110px;
+  padding-bottom: 110px;
   background-color: #fff;
 
 }
@@ -651,45 +651,99 @@ body {
   text-align: center;
 }
 
-.work .all-project a {
+.work .all-project .project {
   display: inline-block;
-  text-decoration: none;
   width: 33%;
   overflow: hidden;
   padding: 2px;
   border: #DDD 1px solid;
   height: 180px;
+  position: relative;
 }
 
 @media (max-width:768px) {
-.work .all-project a {
+.work .all-project .project {
   width: 45%;
   }
 }
 
 @media (max-width:576px) {
-  .work .all-project a {
+  .work .all-project .project {
     width: 100%;
     }
   }
 
-.work .all-project a img {
+.work .all-project .project img {
   width: 100%;
   height: 100%;
+  opacity: .9;
 
 }
 
-.work .all-project a img:hover {
+.work .all-project .project img:hover,
+.work .all-project .project .links-website a:hover img {
   transform: scale(1.3);
+  opacity: 1;
 }
+
+.work .all-project .project .links-website {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-decoration: none;
+}
+
+.work .all-project .project .links-website a {
+  display: block;
+  margin-bottom: 5px;
+  border: 1px solid #f7f7f7;
+  padding: 7px 25px;
+  transition: .5s all;
+  opacity: 0.8;
+  background-color: #02020254;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  
+}
+
+.work .all-project .project .links-website a:hover {
+  transform: scale(1.1);
+  color: #ff7b00;
+  border-color: #ff7b00;
+  background-color: #1f1414;
+  
+  
+}
+.work .all-project .hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  padding: 11px;
+  background-color: #333;
+  border-radius: 10px;
+  margin: 2px;
+  transform: translateX(105%);
+  overflow:hidden;
+}
+
+.work .all-project .project:hover  .hint {
+  overflow: visible;
+  transform: translateX(0); 
+}
+
 
 /* End all work */
 
 
 /* Start Contact */
 .contact {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 110px;
+  padding-bottom: 110px;
   background-color: #e5ecfb;
 }
 
