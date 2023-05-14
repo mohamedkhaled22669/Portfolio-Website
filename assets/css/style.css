@@ -434,7 +434,7 @@ body {
 .about-me {
   text-align: center;
   background-color: #FFF;
-  padding: 110px 8.5%;
+  padding: 110px 8.5% 90px;
 
 }
 
@@ -542,10 +542,12 @@ body {
   text-transform: capitalize;
 }
 
+/* End About me */
+
 /* Start Skills */
 .skills {
   padding-top: 110px;
-  padding-bottom: 110px;
+  padding-bottom: 90px;
 }
 
 .skills h2 {
@@ -620,7 +622,7 @@ body {
 /* Start All Work */
 .work {
   padding-top: 110px;
-  padding-bottom: 110px;
+  padding-bottom: 90px;
   background-color: #fff;
 
 }
@@ -661,9 +663,22 @@ body {
   position: relative;
 }
 
+@media (max-width:1140px) {
+  .work .all-project .project {
+    width: 40%;
+    }
+  }
+
+@media (max-width:992px) {
+  .work .all-project .project {
+    width: 45%;
+    }
+  }
+
 @media (max-width:768px) {
 .work .all-project .project {
-  width: 45%;
+  width: 70%;
+  margin-bottom: 15px;
   }
 }
 
