@@ -1,0 +1,43 @@
+const skillsApis = [
+    {
+        skill_name:"HTML",
+        skill_progress:"95%",
+    },
+    {
+        skill_name:"CSS",
+        skill_progress:"90%",
+    },
+    {
+        skill_name:"JavaScript",
+        skill_progress:"83%",
+    },
+    {
+        skill_name:"Bootstrap",
+        skill_progress:"90%",
+    },
+    {
+        skill_name:"React",
+        skill_progress:"85%",
+    },
+    {
+        skill_name:"Redux",
+        skill_progress:"88%",
+    },
+    {
+        skill_name:"Tookit",
+        skill_progress:"85%",
+    },
+    {
+        skill_name:"NodeJS",
+        skill_progress:"40%",
+    },
+    {
+        skill_name:"Python",
+        skill_progress:"55%",
+    },
+    {
+        skill_name:"Django",
+        skill_progress:"65%",
+    },
+
+]

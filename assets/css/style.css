@@ -71,7 +71,7 @@ body {
     padding-top: 45px;
     padding-left: 50px;
     right: -60%;
-    transition: all .4s; 
+    transition: all .4s;
     display: block;
   }
 
@@ -92,7 +92,7 @@ body {
 }
 
 @media (max-width:992px) {
-  .header .navbar ul li{
+  .header .navbar ul li {
     font-size: 14px;
     display: block;
     margin-bottom: 48px;
@@ -113,7 +113,7 @@ body {
 
 @media (max-width:992px) {
 
-  .header .navbar ul li a{
+  .header .navbar ul li a {
     color: #f0f0f0;
     display: block;
     width: 70%;
@@ -121,7 +121,7 @@ body {
 }
 
 
-  
+
 
 
 
@@ -134,13 +134,13 @@ body {
 }
 
 @media (max-width:992px) {
-  
+
   .header .navbar ul li a.active,
   .header .navbar ul li a:hover {
-  color: #f0f0f0;
-  border-bottom: 4px solid #011aff;
-  padding: 6px 0;
-}
+    color: #f0f0f0;
+    border-bottom: 4px solid #011aff;
+    padding: 6px 0;
+  }
 }
 
 
@@ -161,7 +161,7 @@ body {
   background-color: #000;
   height: 4px;
   margin-bottom: 4px;
-} 
+}
 
 
 /* start Home */
@@ -206,7 +206,7 @@ body {
 }
 
 @media (max-width:576px) {
-  .home .content{
+  .home .content {
     margin-bottom: 40px;
     display: block;
   }
@@ -263,7 +263,7 @@ body {
   .home .content p {
     font-size: 19px;
   }
-} 
+}
 
 @media (max-width:992px) {
   .home .content p {
@@ -305,7 +305,7 @@ body {
 }
 
 @media (max-width:768px) {
-  .home .btn  span{
+  .home .btn span {
     font-size: 12px;
   }
 }
@@ -315,8 +315,9 @@ body {
   font-size: 16px;
   transition: 0.3s;
 }
+
 @media (max-width:768px) {
-  .home .btn  i{
+  .home .btn i {
     margin-left: 3px;
     font-size: 14px;
     transition: 0.3s;
@@ -478,7 +479,7 @@ body {
 }
 
 .about-me .row .image img {
-  width: 42%;
+  width: 65%;
   border-radius: 22px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
   mix-blend-mode: luminosity;
@@ -486,9 +487,15 @@ body {
   cursor: pointer;
 }
 
-@media (max-width:992px) {
+@media (max-width:1200px) {
   .about-me .row .image img {
     width: 65%;
+  }
+}
+
+@media (max-width:992px) {
+  .about-me .row .image img {
+    width: 86%;
   }
 }
 
@@ -541,6 +548,42 @@ body {
 .about-me .row .content p:last-child {
   text-transform: capitalize;
 }
+
+.about-me .row .content .content-data {
+  display: block;
+
+}
+
+
+
+.about-me .row .content .content-data .btn-download {
+  padding-bottom: 10px;
+  padding-right: 15px;
+  margin-top: 24px;
+
+}
+
+@media (max-width:768px) {
+  .about-me .row .content .content-data .btn-download {
+    font-size: 14px;
+  }
+} 
+
+
+.about-me .row .content .content-data .btn-download a{
+
+  color: #fff;
+  background-color: rgb(115, 3, 167);
+  padding: 9px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.about-me .row .content .content-data .btn-download a:hover {
+  background-color: rgb(54 10 75);
+}
+
 
 /* End About me */
 
@@ -666,27 +709,27 @@ body {
 @media (max-width:1140px) {
   .work .all-project .project {
     width: 40%;
-    }
   }
+}
 
 @media (max-width:992px) {
   .work .all-project .project {
     width: 45%;
-    }
   }
+}
 
 @media (max-width:768px) {
-.work .all-project .project {
-  width: 70%;
-  margin-bottom: 15px;
+  .work .all-project .project {
+    width: 70%;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width:576px) {
   .work .all-project .project {
     width: 100%;
-    }
   }
+}
 
 .work .all-project .project img {
   width: 100%;
@@ -722,7 +765,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: #fff;
-  
+
 }
 
 .work .all-project .project .links-website a:hover {
@@ -730,9 +773,10 @@ body {
   color: #ff7b00;
   border-color: #ff7b00;
   background-color: #1f1414;
-  
-  
+
+
 }
+
 .work .all-project .hint {
   position: absolute;
   top: 0;
@@ -743,12 +787,12 @@ body {
   border-radius: 10px;
   margin: 2px;
   transform: translateX(105%);
-  overflow:hidden;
+  overflow: hidden;
 }
 
-.work .all-project .project:hover  .hint {
+.work .all-project .project:hover .hint {
   overflow: visible;
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 
@@ -1008,7 +1052,7 @@ body {
 }
 
 @media (max-width:768px) {
-  .footer .box-container .box{
+  .footer .box-container .box {
     margin-bottom: 45px;
   }
 }
@@ -1111,7 +1155,7 @@ body {
 
 @media (max-width:576px) {
   .container {
-    padding:9.5%;
+    padding: 9.5%;
   }
 
   section {
