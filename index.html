@@ -8,6 +8,14 @@
   <meta name="keywords"
     content="mohamed khaled, portfolio, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio">
   <meta name="description" content="Welcome to Mohamed'KH Portfolio. Full-Stack Web Developer" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('CfKcPNHIWmYINVU6N');
+    })();
+  </script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -22,6 +30,10 @@
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="./images/favicon.png" type="image/x-png">
   <title>Portfolio | Mohamed Khaled</title>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script src="./assets/js/sendemail.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -90,7 +102,7 @@
           very passionate about improving my coding skills and websites. I build websites using stack. I work for myself
           to improve my skills. I love building clone websites.
         </p>
-        
+
         <div class="content-data">
           <div class="box-contact">
             <p><span>Email:</span> mkhost85@gmail.com</p>
@@ -98,7 +110,7 @@
             <p><span>Place:</span> Cairo,Egypt</p>
           </div>
           <div class="btn-download">
-            <a href="./CV/MohamedKhaledResume.pdf" download >
+            <a href="./CV/MohamedKhaledResume.pdf" download>
               Download CV
               <i class="fas fa-download"></i>
             </a>
@@ -141,26 +153,28 @@
       </div>
       <form id="contact-form">
         <div class="form-group">
+          <input type="hidden" name="contact_number">
           <div class="field">
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="user_name" placeholder="Name">
             <i class="fas fa-user"></i>
           </div>
           <div class="field">
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="reply_to" placeholder="Email" required>
             <i class="fas fa-envelope"></i>
           </div>
           <div class="field">
-            <input type="text" name="phone" placeholder="Phone">
+            <input type="text" name="phone_number" placeholder="Phone">
             <i class="fas fa-phone-alt"></i>
           </div>
           <div class="massage">
-            <textarea name="massage" placeholder="Massage" id="massage"></textarea>
+            <textarea name="message" placeholder="Massage" id="massage"></textarea>
             <i class="fas fa-comment-dots"></i>
           </div>
         </div>
         <div class="button-area">
           <button type="submit">Submit<i class="fas fa-paper-plane"></i> </button>
-
+          <span class="success">Mail sent</span>
+          <span class="failed">Email failed</span>
         </div>
       </form>
     </div>

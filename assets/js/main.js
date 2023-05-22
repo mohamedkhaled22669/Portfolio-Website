@@ -167,40 +167,6 @@ scrollToSectionSmoothOneItem(btnAboutMe);
 
 
 
-// show project with extra file  
-let allProjects = document.getElementById('projects')
-
-worksApis.forEach(work => {
-    allProjects.innerHTML += `
-        <div class="project"  >
-            <img src="${work.img}">
-            <div class="links-website">
-                <a href=${work.template} target="_blank">Website <i class="fas fa-eye"></i></a>
-                <a href=${work.linkGithub} target="_blank">Coding <i class="fab fa-github"></i></a>
-            </div>
-            <div class="hint">
-            ${work.hintTemplate}
-            </div>
-        </div>`
-});
-    
-    
-    
-
-
-// show skills with other fille
-let skillsBoxPerant = document.getElementById('skills_JS');
-
-skillsApis.forEach(skill => {
-    skillsBoxPerant.innerHTML += `
-    <div class="skills-box">
-        <div class="skill-name">${skill.skill_name}</div>
-        <div class="skill-progress">
-            <span data-progress="${skill.skill_progress}"></span>
-        </div>
-    </div>`
-    console.log(skill.skill_progress);
-});
 
 
 

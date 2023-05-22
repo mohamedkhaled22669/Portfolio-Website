@@ -19,3 +19,21 @@ const worksApis = [
     },
 
 ]
+
+
+// show project with extra file  
+let allProjects = document.getElementById('projects')
+
+worksApis.forEach(work => {
+    allProjects.innerHTML += `
+        <div class="project"  >
+            <img src="${work.img}">
+            <div class="links-website">
+                <a href=${work.template} target="_blank">Website <i class="fas fa-eye"></i></a>
+                <a href=${work.linkGithub} target="_blank">Coding <i class="fab fa-github"></i></a>
+            </div>
+            <div class="hint">
+            ${work.hintTemplate}
+            </div>
+        </div>`
+});

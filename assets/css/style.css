@@ -6,7 +6,6 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
   transition: all 0.2s linear;
 
 }
@@ -536,9 +535,12 @@ body {
   font-family: "Nunito";
   line-height: 1.7;
   text-transform: lowercase;
-
-
 }
+
+.about-me .row .content > p {
+  text-transform: capitalize;
+}
+
 
 .about-me .row .content p span {
   color: #011aff;
@@ -804,6 +806,7 @@ body {
   padding-top: 110px;
   padding-bottom: 110px;
   background-color: #e5ecfb;
+  text-transform: none !important;
 }
 
 
@@ -1026,6 +1029,21 @@ body {
 .contact .content #contact-form .button-area button:hover i {
   transform: translateX(5px);
 }
+
+.contact .content #contact-form .button-area .success,
+.contact .content #contact-form .button-area .failed {
+  color: green;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-size: 14px;
+  display: none;
+}
+
+.contact .content #contact-form .button-area .failed {
+  color: red;
+}
+
 
 
 

@@ -41,3 +41,18 @@ const skillsApis = [
     },
 
 ]
+
+
+
+// show skills with other fille
+let skillsBoxPerant = document.getElementById('skills_JS');
+
+skillsApis.forEach(skill => {
+    skillsBoxPerant.innerHTML += `
+    <div class="skills-box">
+        <div class="skill-name">${skill.skill_name}</div>
+        <div class="skill-progress">
+            <span data-progress="${skill.skill_progress}"></span>
+        </div>
+    </div>`
+});
