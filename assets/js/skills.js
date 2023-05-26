@@ -29,7 +29,10 @@ const skillsApis = [
     },
     {
         skill_name:"NodeJS",
-        skill_progress:"40%",
+        skill_progress:"65%",
+    },{
+        skill_name:"Express.js",
+        skill_progress:"70%",
     },
     {
         skill_name:"Python",
